@@ -1,12 +1,13 @@
 name: docker
 
 on:
-  push:
-    branches:
-      - master
-      - develop
-    paths-ignore:
-      - '**.md'
+  workflow_dispatch: 
+  #push:
+   # branches:
+   #   - master
+    #  - develop
+  #  paths-ignore:
+#      - '**.md'
 
 env:
   REGISTRY: ghcr.io
