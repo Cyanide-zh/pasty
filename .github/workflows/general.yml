@@ -3,9 +3,9 @@ name: general
 on:
   pull_request:
   workflow_dispatch: 
-  push:
-    paths-ignore:
-      - '**.md'
+  #push:
+    #paths-ignore:
+ #     - '**.md'
 
 jobs:
   build:
