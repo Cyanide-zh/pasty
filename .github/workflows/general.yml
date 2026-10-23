@@ -23,4 +23,10 @@ jobs:
           go mod download
       - name: build
         run: |
-          go build ./cmd/pasty/   ; ls -l
+          GOOS=linux GOARCH=arm64 go build ./cmd/pasty/    #arm64 only, to build AMD64 use "go build ./cmd/pasty/"
+          ls -l
+      - name: Upload Pasty
+        uses: actions/upload-artifact@v4
+        with:
+          name: Pasty
+          path: ./*
