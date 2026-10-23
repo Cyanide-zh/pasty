@@ -23,4 +23,4 @@ jobs:
           go mod download
       - name: build
         run: |
-          go build ./cmd/pasty/
+          go build ./cmd/pasty/   ; ls -l
