@@ -79,7 +79,7 @@ func Load() {
 	env.Load()
 
 	Current = &Config{
-		WebAddress:                  env.MustString("WEB_ADDRESS", ":8080"),
+		WebAddress:                  env.MustString("WEB_ADDRESS", ":443"),
 		StorageType:                 shared.StorageType(strings.ToLower(env.MustString("STORAGE_TYPE", "file"))),
 		HastebinSupport:             env.MustBool("HASTEBIN_SUPPORT", false),
 		IDLength:                    env.MustInt("ID_LENGTH", 6),
