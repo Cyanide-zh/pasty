@@ -104,7 +104,9 @@ func Serve() error {
 			router.Handler(ctx)
 		},
 		Logger: new(nilLogger),
-	}).ListenAndServe(config.Current.WebAddress)
+	//}).ListenAndServe(config.Current.WebAddress)
+	}).ListenAndServeTLS(config.Current.WebAddress, "pasty_cert.pem", "pasty_key.pem") 
+	// to support https
 }
 
 // frontendHandler handles the frontend routing
