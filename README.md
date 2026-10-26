@@ -58,6 +58,8 @@ To configure pasty, simply create a `.env` file in the same directory as the bin
 
 To run pasty, simply execute the binary.
 
+pasty now supports https.
+
 ### 2.) Docker (recommended)
 To run pasty with Docker, you should have basic understanding of it.
 
@@ -77,7 +79,7 @@ Pasty will be available at http://localhost:8080.
 ## General environment variables
 | Environment Variable                  | Default Value                                                    | Type     | Description                                                                                                                |
 |---------------------------------------|------------------------------------------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------|
-| `PASTY_WEB_ADDRESS`                   | `:8080`                                                          | `string` | Defines the address the web server listens to                                                                              |
+| `PASTY_WEB_ADDRESS`                   | `:443`                                                          | `string` | Defines the address the web server (https) listens to                                                                              |
 | `PASTY_STORAGE_TYPE`                  | `file`                                                           | `string` | Defines the storage type the pastes are saved to                                                                           |
 | `PASTY_HASTEBIN_SUPPORT`              | `false`                                                          | `bool`   | Defines whether or not the `POST /documents` endpoint should be enabled, as known from the hastebin servers                |
 | `PASTY_ID_LENGTH`                     | `6`                                                              | `number` | Defines the length of the ID of a paste                                                                                    |
